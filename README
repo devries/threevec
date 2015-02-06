@@ -1,0 +1,152 @@
+Help on package threevec:
+
+NAME
+    threevec
+
+FILE
+    /Users/devries/Projects/threevec/threevec/__init__.py
+
+DESCRIPTION
+    A Three-D vector library written as part of a 
+    computational physics course.
+
+PACKAGE CONTENTS
+    vector
+
+CLASSES
+    numbers.Number(__builtin__.object)
+        threevec.vector.Threevec
+    
+    class Threevec(numbers.Number)
+     |  Method resolution order:
+     |      Threevec
+     |      numbers.Number
+     |      __builtin__.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __abs__(self)
+     |      The magnitude of a vector is obtained using the abs() operator.
+     |  
+     |  __add__(self, other)
+     |      Vector addition.
+     |  
+     |  __contains__(self, item)
+     |      The expression "n in vector" will return True if n is one of the
+     |      components of the vector.
+     |  
+     |  __div__(self, other)
+     |      Division of a vector by a scalar.
+     |  
+     |  __eq__(self, other)
+     |      Vectors are defined as equal if all their elements are equal.
+     |  
+     |  __getitem__(self, key)
+     |      Vectors also act as three element typles. Element 0 is the x
+     |      component, Element 1 is the y component, and Element 2 is the z
+     |      component.
+     |  
+     |  __init__(self, x=0, y=0, z=0)
+     |  
+     |  __iter__(self)
+     |      As an iterator, the vector returns the elements x, y, and z in that
+     |      order.
+     |  
+     |  __len__(self)
+     |      We can treat a Threevec as a sequence of length 3.
+     |  
+     |  __mod__(self, other)
+     |      The % operator is used to calculate a cross-product.
+     |  
+     |  __mul__(self, other)
+     |      Dot product between vectors or vector, scalar multiplication.
+     |  
+     |  __ne__(self, other)
+     |      Vectors are defined as unequal if any of the elements are not equal.
+     |  
+     |  __neg__(self)
+     |      Inversion of a vector is done by the - sign.
+     |  
+     |  __repr__(self)
+     |  
+     |  __rmul__(self, other)
+     |      Multiplication of a scalar by a vector.
+     |  
+     |  __str__(self)
+     |  
+     |  __sub__(self, other)
+     |      Subtraction of a vector from a vector. Equivalent to addition of
+     |      a vector and its inverse.
+     |  
+     |  rotate(self, axis, angle)
+     |      Return a vector which has been rotated around the axis vector by
+     |      an angle in the right-handed sense.
+     |  
+     |  unit(self)
+     |      Return a new vector in the same direction as this vector, but with unit length.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+     |  
+     |  phi
+     |      The spherical phi component, which is the angle between the
+     |      projection of the vector on the x-y plane and the x-axis. 
+     |      This ranges from -pi to pi.
+     |  
+     |  rho
+     |      The cylindrical radius component. Equal to the square root of the
+     |      x component squared and the y component squared.
+     |  
+     |  theta
+     |      The spherical theta component, which is the angle between the vector
+     |      and the z axis.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |  
+     |  __abstractmethods__ = frozenset([])
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes inherited from numbers.Number:
+     |  
+     |  __hash__ = None
+     |  
+     |  __metaclass__ = <class 'abc.ABCMeta'>
+     |      Metaclass for defining Abstract Base Classes (ABCs).
+     |      
+     |      Use this metaclass to create an ABC.  An ABC can be subclassed
+     |      directly, and then acts as a mix-in class.  You can also register
+     |      unrelated concrete classes (even built-in classes) and unrelated
+     |      ABCs as 'virtual subclasses' -- these and their descendants will
+     |      be considered subclasses of the registering ABC by the built-in
+     |      issubclass() function, but the registering ABC won't show up in
+     |      their MRO (Method Resolution Order) nor will method
+     |      implementations defined by the registering ABC be callable (not
+     |      even via super()).
+
+FUNCTIONS
+    cylvec(rho, phi, z)
+        A function which returns a vector defined by rho, phi, z in
+        cylindrical coordinates.
+    
+    recvec(x, y, z)
+        A function which returns a vector defined by x, y, and z in
+        rectangular coordinates.
+    
+    sphvec(r, theta, phi)
+        A function which returns a vector defined by r, theta, phi in
+        spherical coordinates.
+
+DATA
+    __all__ = ['Threevec', 'i', 'j', 'k', 'recvec', 'cylvec', 'sphvec']
+    i = Threevec(1,0,0)
+    j = Threevec(0,1,0)
+    k = Threevec(0,0,1)
+
+
