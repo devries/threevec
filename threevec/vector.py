@@ -11,6 +11,13 @@ import math
 import numbers
 
 class Threevec(numbers.Number):
+    """Three vector class. 
+
+    Attributes:
+        x -- (float) The cartesian x coordinate
+        y -- (float) The cartesian y coordinate
+        z -- (float) The cartesian z coordinate"""
+
     def __init__(self,x=0,y=0,z=0):
         self.x=x
         self.y=y

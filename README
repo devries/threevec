@@ -18,6 +18,13 @@ CLASSES
         threevec.vector.Threevec
     
     class Threevec(numbers.Number)
+     |  Three vector class. 
+     |  
+     |  Attributes:
+     |      x -- (float) The cartesian x coordinate
+     |      y -- (float) The cartesian y coordinate
+     |      z -- (float) The cartesian z coordinate
+     |  
      |  Method resolution order:
      |      Threevec
      |      numbers.Number
